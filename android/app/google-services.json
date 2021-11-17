@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "328432658422",
+    "project_id": "tttm-game",
+    "storage_bucket": "tttm-game.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328432658422:android:1995d6b91744580ea289d7",
+        "android_client_info": {
+          "package_name": "com.tictactoe.tttm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328432658422-6lekf3bjanp7bqth9vr6m899kdjksnmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiQBzM3zKlxX6FyF77Bb0Tzy2x4mtpKmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328432658422-6lekf3bjanp7bqth9vr6m899kdjksnmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
