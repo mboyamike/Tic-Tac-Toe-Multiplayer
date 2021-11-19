@@ -10,7 +10,7 @@ class Single_Player extends StatefulWidget {
 }
 
 class _Single_PlayerState extends State<Single_Player> {
-  List<GameButton> buttonsList;
+  List<GameButton> buttonsList = [];
   var player1;
   var player2;
   var activePlayer;
@@ -23,8 +23,8 @@ class _Single_PlayerState extends State<Single_Player> {
   }
 
   List<GameButton> doInit() {
-    player1 = new List();
-    player2 = new List();
+    player1 = [];
+    player2 = [];
     activePlayer = 1;
 
     var gameButtons = <GameButton>[
@@ -70,7 +70,7 @@ class _Single_PlayerState extends State<Single_Player> {
   }
 
   void autoPlay() {
-    var emptyCells = new List();
+    var emptyCells = [];
     var list = new List.generate(9, (i) => i + 1);
     for (var cellID in list) {
       if (!(player1.contains(cellID) || player2.contains(cellID))) {
@@ -218,7 +218,10 @@ class _Single_PlayerState extends State<Single_Player> {
             new RaisedButton(
               child: new Text(
                 "Reset",
-                style: new TextStyle(fontSize: 20.0),
+                style: new TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.black,
+                  ),
               ),
               color: Colors.white,
               padding: const EdgeInsets.all(20.0),

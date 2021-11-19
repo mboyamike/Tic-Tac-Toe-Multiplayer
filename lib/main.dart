@@ -1,9 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:tttm/SinglePlayer.dart';
+import 'package:provider/provider.dart';
 import 'package:tttm/home_page.dart';
+import 'package:tttm/select_mode.dart';
+import 'package:tttm/singleplayer.dart';
 
-void main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
@@ -12,11 +14,14 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      theme: new ThemeData(primaryColor: Colors.black),
-      routes: {
-        "/": (context) => HomePage(),
-      },
-    );
+    return MaterialApp(
+          themeMode: ThemeMode.dark,
+          darkTheme: ThemeData(
+            brightness: Brightness.dark,
+          ),
+          routes: {
+            "/": (context) => HomePage(),
+          },
+        );
   }
 }
