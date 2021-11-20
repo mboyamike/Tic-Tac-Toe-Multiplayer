@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tttm/multiplayer/multiplayer.dart';
 import 'package:tttm/singleplayer.dart';
 
 class SelectMode extends StatelessWidget {
@@ -39,7 +40,21 @@ class SelectMode extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(60.0, 10.0, 10.0, 10.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MenuScreen.route());
+              },
+              child: Text(
+                'Multiplayer Mode',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

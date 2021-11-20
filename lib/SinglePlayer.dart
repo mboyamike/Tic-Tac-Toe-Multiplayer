@@ -11,13 +11,12 @@ class Single_Player extends StatefulWidget {
 
 class _Single_PlayerState extends State<Single_Player> {
   List<GameButton> buttonsList = [];
-  var player1;
-  var player2;
-  var activePlayer;
+  late List<String> player1;
+  late List<String> player2;
+  late int activePlayer;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     buttonsList = doInit();
   }
